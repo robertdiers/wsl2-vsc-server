@@ -10,6 +10,7 @@ RUN apt update
 RUN apt -y upgrade
 RUN apt install -y git curl
 RUN apt install -y openjdk-11-jdk
+RUN apt install -y maven
 
 #install docker to startup environment
 RUN apt install -y apt-transport-https \
