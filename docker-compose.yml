@@ -10,6 +10,7 @@ services:
         volumes:
             - /home/robert/.config/:/home/coder/.config/        
             - /home/robert/.m2/settings.xml:/home/coder/.m2/settings.xml
+            - /home/robert/.m2/repository:/home/coder/.m2/repository
             - /home/robert/:/home/coder/project/
             #add socket required for docker
             - /var/run/docker.sock:/var/run/docker.sock       
