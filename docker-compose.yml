@@ -1,12 +1,11 @@
-version: '3.3'
+version: '3.8'
 services:
 
     vsc-server:
         build: .
         container_name: vsc-server
-        hostname: vsc-server
-        networks:
-            vsc-net:
+#        hostname: vsc-server
+        network_mode: host
         volumes:
             - /home/robert/.config/:/home/coder/.config/        
             - /home/robert/.m2/settings.xml:/home/coder/.m2/settings.xml
@@ -16,11 +15,9 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock       
         environment:
             - DOCKER_USER=$USER
+            - PORT=50000
         user: "${EXAMPLE_UID}:${EXAMPLE_GID}"
-        expose:
-            - 8080
-        ports:
-            - 9001:8080    
-
-networks:
-    vsc-net:
+#        expose:
+#            - 8080
+#        ports:
+#            - 9001:8080    
