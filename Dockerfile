@@ -27,7 +27,7 @@ RUN sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/doc
 RUN sudo chmod +x /usr/local/bin/docker-compose
 
 #install code extensions to browse code from all projects
-RUN code-server --install-extension redhat.java
+RUN code-server --install-extension vscjava.vscode-java-pack
 RUN code-server --install-extension GabrielBB.vscode-lombok
 RUN code-server --install-extension ms-azuretools.vscode-docker
 
