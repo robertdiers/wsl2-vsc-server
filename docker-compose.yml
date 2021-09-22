@@ -15,10 +15,6 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock       
         environment:
             - DOCKER_USER=$USER
-            - PORT=50000
+            - PORT=30000
         restart: always    
-        user: "${EXAMPLE_UID}:${EXAMPLE_GID}"
-#        expose:
-#            - 8080
-#        ports:
-#            - 9001:8080    
+        user: "${EXAMPLE_UID}:${EXAMPLE_GID}" 
